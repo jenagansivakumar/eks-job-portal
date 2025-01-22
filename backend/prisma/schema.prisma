@@ -1,0 +1,38 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model userDetails {
+  id Int @id @default(autoincrement())
+  email String @unique
+  name String?
+  username String @unique
+  password String 
+}
+
+model jobDetail {
+  id Int @id @default(autoincrement())
+  jobTitle String
+  jobDescription String
+}
+
+
+model userProfileDetails {
+  id Int @id @default(autoincrement())
+  name String
+  age Int
+  profession String
+  workingExperience String
+  location String
+  hasOperationRoomExp Boolean
+  lastPosition String?
+  salaryExpectation Int?
+
+}

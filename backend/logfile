@@ -1,0 +1,103 @@
+2025-01-05 11:50:56.572 CET [15526] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin23.6.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2025-01-05 11:50:56.574 CET [15526] LOG:  could not bind IPv6 address "::1": Address already in use
+2025-01-05 11:50:56.574 CET [15526] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2025-01-05 11:50:56.574 CET [15526] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2025-01-05 11:50:56.574 CET [15526] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2025-01-05 11:50:56.574 CET [15526] WARNING:  could not create listen socket for "localhost"
+2025-01-05 11:50:56.574 CET [15526] FATAL:  could not create any TCP/IP sockets
+2025-01-05 11:50:56.574 CET [15526] LOG:  database system is shut down
+2025-01-05 12:14:26.447 CET [15795] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin23.6.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2025-01-05 12:14:26.449 CET [15795] LOG:  could not bind IPv6 address "::1": Address already in use
+2025-01-05 12:14:26.449 CET [15795] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2025-01-05 12:14:26.449 CET [15795] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2025-01-05 12:14:26.449 CET [15795] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2025-01-05 12:14:26.449 CET [15795] WARNING:  could not create listen socket for "localhost"
+2025-01-05 12:14:26.449 CET [15795] FATAL:  could not create any TCP/IP sockets
+2025-01-05 12:14:26.449 CET [15795] LOG:  database system is shut down
+2025-01-05 12:15:30.872 CET [15931] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin23.6.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2025-01-05 12:15:30.873 CET [15931] LOG:  could not bind IPv6 address "::1": Address already in use
+2025-01-05 12:15:30.873 CET [15931] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2025-01-05 12:15:30.873 CET [15931] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2025-01-05 12:15:30.873 CET [15931] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2025-01-05 12:15:30.873 CET [15931] WARNING:  could not create listen socket for "localhost"
+2025-01-05 12:15:30.873 CET [15931] FATAL:  could not create any TCP/IP sockets
+2025-01-05 12:15:30.873 CET [15931] LOG:  database system is shut down
+2025-01-05 12:15:56.452 CET [15968] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin23.6.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2025-01-05 12:15:56.454 CET [15968] LOG:  listening on IPv6 address "::1", port 5433
+2025-01-05 12:15:56.454 CET [15968] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2025-01-05 12:15:56.454 CET [15968] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5433"
+2025-01-05 12:15:56.456 CET [15969] LOG:  database system was shut down at 2025-01-05 11:50:51 CET
+2025-01-05 12:15:56.458 CET [15968] LOG:  database system is ready to accept connections
+2025-01-05 12:16:10.214 CET [16044] FATAL:  role "postgres" does not exist
+2025-01-05 12:17:41.531 CET [16073] ERROR:  syntax error at or near "psql" at character 1
+2025-01-05 12:17:41.531 CET [16073] STATEMENT:  psql -h localhost -U postgres -p 5433 -d postgres
+	
+	CREATE DATABASE mydb WITH OWNER postgres;
+2025-01-05 12:17:48.711 CET [16119] FATAL:  database "mydb" does not exist
+2025-01-05 12:18:55.066 CET [16263] LOG:  could not receive data from client: Connection reset by peer
+2025-01-05 12:18:55.080 CET [16265] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-01-05 12:18:55.080 CET [16265] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-01-05 12:18:55.325 CET [16276] FATAL:  terminating connection due to administrator command
+2025-01-05 12:18:55.509 CET [16278] FATAL:  terminating connection due to administrator command
+2025-01-05 12:18:55.689 CET [16279] FATAL:  terminating connection due to administrator command
+2025-01-05 16:14:26.589 CET [20527] ERROR:  relation "public.User" does not exist at character 83
+2025-01-05 16:14:26.589 CET [20527] STATEMENT:  SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email" FROM "public"."User" WHERE 1=1 OFFSET $1
+2025-01-05 16:15:32.158 CET [20622] ERROR:  relation "public.User" does not exist at character 83
+2025-01-05 16:15:32.158 CET [20622] STATEMENT:  SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email" FROM "public"."User" WHERE 1=1 OFFSET $1
+2025-01-05 16:23:20.638 CET [21751] ERROR:  relation "public.User" does not exist at character 13
+2025-01-05 16:23:20.638 CET [21751] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:23:53.607 CET [21823] ERROR:  relation "public.User" does not exist at character 13
+2025-01-05 16:23:53.607 CET [21823] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:24:30.354 CET [21888] FATAL:  terminating connection due to administrator command
+2025-01-05 16:24:30.544 CET [21896] FATAL:  terminating connection due to administrator command
+2025-01-05 16:24:30.720 CET [21897] FATAL:  terminating connection due to administrator command
+2025-01-05 16:24:30.893 CET [21900] FATAL:  terminating connection due to administrator command
+2025-01-05 16:36:05.331 CET [22762] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:36:05.331 CET [22762] DETAIL:  Key (email)=(johndoe@example.com) already exists.
+2025-01-05 16:36:05.331 CET [22762] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:36:11.273 CET [22762] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:36:11.273 CET [22762] DETAIL:  Key (email)=(johndoe@example.com) already exists.
+2025-01-05 16:36:11.273 CET [22762] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:36:11.634 CET [22762] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:36:11.634 CET [22762] DETAIL:  Key (email)=(johndoe@example.com) already exists.
+2025-01-05 16:36:11.634 CET [22762] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:36:11.908 CET [22762] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:36:11.908 CET [22762] DETAIL:  Key (email)=(johndoe@example.com) already exists.
+2025-01-05 16:36:11.908 CET [22762] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:36:12.144 CET [22762] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:36:12.144 CET [22762] DETAIL:  Key (email)=(johndoe@example.com) already exists.
+2025-01-05 16:36:12.144 CET [22762] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:36:12.348 CET [22762] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:36:12.348 CET [22762] DETAIL:  Key (email)=(johndoe@example.com) already exists.
+2025-01-05 16:36:12.348 CET [22762] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:36:12.554 CET [22762] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:36:12.554 CET [22762] DETAIL:  Key (email)=(johndoe@example.com) already exists.
+2025-01-05 16:36:12.554 CET [22762] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:36:12.768 CET [22762] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:36:12.768 CET [22762] DETAIL:  Key (email)=(johndoe@example.com) already exists.
+2025-01-05 16:36:12.768 CET [22762] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:41:33.314 CET [23589] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:41:33.314 CET [23589] DETAIL:  Key (email)=(johndoe@example.codm) already exists.
+2025-01-05 16:41:33.314 CET [23589] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 16:43:08.787 CET [23879] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 16:43:08.787 CET [23879] DETAIL:  Key (email)=(johndoe@example.codm) already exists.
+2025-01-05 16:43:08.787 CET [23879] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 17:55:10.165 CET [28966] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 17:55:10.165 CET [28966] DETAIL:  Key (email)=(.cdfakjjodm) already exists.
+2025-01-05 17:55:10.165 CET [28966] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 17:55:11.961 CET [28966] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 17:55:11.961 CET [28966] DETAIL:  Key (email)=(.cdfakjjodm) already exists.
+2025-01-05 17:55:11.961 CET [28966] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 18:00:48.860 CET [29039] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 18:00:48.860 CET [29039] DETAIL:  Key (email)=(.cdfadfafkjjodm) already exists.
+2025-01-05 18:00:48.860 CET [29039] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-05 18:18:21.418 CET [29993] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-05 18:18:21.418 CET [29993] DETAIL:  Key (email)=(.cdfadfafkjjodm) already exists.
+2025-01-05 18:18:21.418 CET [29993] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-06 08:32:52.773 CET [40464] ERROR:  duplicate key value violates unique constraint "User_email_key"
+2025-01-06 08:32:52.773 CET [40464] DETAIL:  Key (email)=(email.com) already exists.
+2025-01-06 08:32:52.773 CET [40464] STATEMENT:  INSERT INTO "public"."User" ("name","email") VALUES ($1,$2) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email"
+2025-01-06 19:47:45.124 CET [15968] LOG:  received smart shutdown request
+2025-01-06 19:47:45.130 CET [15968] LOG:  background worker "logical replication launcher" (PID 15975) exited with exit code 1
+2025-01-06 19:47:45.134 CET [15970] LOG:  shutting down
+2025-01-06 19:47:45.230 CET [15968] LOG:  database system is shut down
