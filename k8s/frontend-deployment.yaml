@@ -18,4 +18,6 @@ spec:
         app: frontend
   containers:
     - name: frontend
-      image: 
+      image: jenagan/job-portal-frontend:latest
+      ports:
+      - containerPort: 80
