@@ -11,8 +11,12 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      labels:
         app: backend
+    template:
+       metadata:
+         labels:
+          app: backend
+        
   containers:
     - name: backend
       images: jenagan/job-portal-backend:latest
