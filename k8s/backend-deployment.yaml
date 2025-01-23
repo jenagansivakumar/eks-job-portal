@@ -21,6 +21,6 @@ spec:
             - containerPort: 4000
           env:
           - name: DATABASE_URL
-            value: "postgresql://postgres:password@postgres-service:5432/mydb"
+            value: "postgresql://postgres:password@postgres-service:5432/usersdb"
           - name: JWT_SECRET
             value: "yourSuperSecretKey123!@"
