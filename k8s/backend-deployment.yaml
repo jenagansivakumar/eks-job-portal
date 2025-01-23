@@ -19,3 +19,8 @@ spec:
           image: jenagan/job-portal-backend:latest
           ports:
             - containerPort: 4000
+          env:
+          - name: DATABASE_URL
+            value: "postgresql://postgres:password@postgres-service:5432/mydb"
+          - name: JWT_SECRET
+            value: "yourSuperSecretKey123!@"
