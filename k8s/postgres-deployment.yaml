@@ -21,9 +21,7 @@ spec:
             - name: POSTGRES_USER
               value: postgres
             - name: POSTGRES_PASSWORD
-              value: POSTGRES_PASSWORD
-            - name: POSTGRES_DB
-              value: mydb
+              value: password
             - name: POSTGRES_DB
               value: usersdb
           volumeMounts:

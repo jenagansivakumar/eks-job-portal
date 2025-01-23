@@ -19,3 +19,4 @@ spec:
           image: jenagan/job-portal-frontend:latest
           ports:
             - containerPort: 80
+            
