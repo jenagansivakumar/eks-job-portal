@@ -1,12 +1,9 @@
 apiVersion: apps/v1
-
 kind: Deployment
-
 metadata:
   name: backend
   labels: 
     app: backend
-
 spec:
   replicas: 2
   selector:
@@ -16,9 +13,9 @@ spec:
     metadata:
       labels:
         app: backend     
-  containers:
-    - name: backend
-      image: jenagan/job-portal-backend:latest
-      ports:
-        containerPort: 4000
-    
+    spec:
+      containers:
+        - name: backend
+          image: jenagan/job-portal-backend:latest
+          ports:
+            - containerPort: 4000
