@@ -37,3 +37,16 @@ resource "aws_internet_gateway" "jena_igw" {
     Name = "jena-igw"
   }
 }
+
+resource "aws_route_table" "public_rt" {
+  vpc_id = aws_vpc.jena_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.jena_igw.id
+  }
+
+  tags = {
+    Name = "jena-public-route-table"
+  }
+}
