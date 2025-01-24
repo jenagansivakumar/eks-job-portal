@@ -18,3 +18,14 @@ resource "aws_subnet" "public_subnet" {
     Name = "jena-public-subnet-${count.index + 1}"
   }
 }
+
+resource "aws_subnet" "private_subnet" {
+  count = length(var.private_subnets)
+
+  vpc_id = aws_vpc.jena_vpc.id
+  cidr_block = var.private_subnets[count.index]
+
+  tags = {
+    Name = "jena-private-subnet-${count.index + 1}"
+  }
+}
