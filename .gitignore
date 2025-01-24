@@ -32,3 +32,13 @@ build/
 
 # OS-specific
 Thumbs.db
+
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Sensitive data
+*.pem
+*.key
