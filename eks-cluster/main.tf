@@ -86,3 +86,10 @@ resource "aws_route_table" "private_rt" {
     Name = "jena-private-route-table"
   }
 }
+
+resource "aws_route_table_association" "private_subnet_association" {
+  count          = length(var.private_subnets)
+  subnet_id      = aws_subnet.private_subnets[count.index].id
+  route_table_id = aws_route_table.private_rt.id
+}
+
