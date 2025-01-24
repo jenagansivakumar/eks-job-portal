@@ -68,8 +68,21 @@ resource "aws_eip" "jena_nat_eip" {
 resource "aws_nat_gateway" "jena_nat" {
   allocation_id = aws_eip.jena_nat_eip.id
   subnet_id = aws_subnet.public_subnets[0].id
-  
+
   tags = {
     Name = "jena-nat-gateway"
+  }
+}
+
+resource "aws_route_table" "private_rt" {
+  vpc_id = aws_vpc.jena_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.jena_nat.id
+  }
+
+  tags = {
+    Name = "jena-private-route-table"
   }
 }
