@@ -1,8 +1,20 @@
-resource "aws_eks_cluster" "jena-job-portal-cluster" {
-  name = "jena-job-portal-cluster"
-  role_arn = aws_iam_role.eks_cluster_role.arn
+resource "aws_vpc" "jena_vpc" {
+  cidr_block = var.vpc_cidr
 
-  vpc_config {
-    subnet_ids = var.subnet_ids
+  tags = {
+    Name = "jena-vpc"
+  }
+}
+
+resource "aws_subnet" "public_subnet" {
+  count = length(var.public_subnets)
+
+  vpc_id = aws_vpc.jena_vpc.id
+  cidr_block = var.public_subnets[count.index]
+  map_public_ip_on_launch = true
+
+
+  tags = {
+    Name = "jena-public-subnet-${count.index + 1}"
   }
 }
