@@ -29,3 +29,11 @@ resource "aws_subnet" "private_subnet" {
     Name = "jena-private-subnet-${count.index + 1}"
   }
 }
+
+resource "aws_internet_gateway" "jena_igw" {
+  vpc_id = aws_vpc.jena_vpc.id
+
+  tags = {
+    Name = "jena-igw"
+  }
+}
