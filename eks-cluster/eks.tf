@@ -26,3 +26,17 @@ resource "aws_iam_role_policy_attachment" "eks_vpc_resource_controller" {
   role       = aws_iam_role.eks_cluster_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
 }
+
+
+resource "aws_eks_cluster" "jena_cluster" {
+  name     = "jena-cluster"
+  role_arn = aws_iam_role.eks_cluster_role.arn
+
+  vpc_config {
+    subnet_ids = concat(aws_subnet.public_subnets[*].id, aws_subnet.private_subnets[*].id)
+  }
+
+  tags = {
+    Name = "jena-cluster"
+  }
+}
