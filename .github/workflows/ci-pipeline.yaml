@@ -23,7 +23,9 @@ jobs:
          npm install
 
       - name: Check package.json
-        run: cat package.json
+        run: |
+         cd backend
+         cat package.json
 
       - name: Build Project
         run: |
