@@ -133,6 +133,6 @@ resource "kubernetes_persistent_volume_claim" "postgres_pvc" {
   }
 
     timeouts {
-    create = "30m"  # increase the timeout to 30 minutes (adjust as needed)
+    create = "30m"  
   }
 }
