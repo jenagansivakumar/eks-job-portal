@@ -18,7 +18,9 @@ jobs:
           node-version: "20"
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+         cd backend
+         npm install
 
       - name: Check package.json
         run: cat package.json
