@@ -20,6 +20,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Check package.json
+        run: cat package.json
+
       - name: Build Project
         run: npm run build
 
