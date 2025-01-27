@@ -11,6 +11,7 @@ resource "aws_subnet" "public_subnets" {
 
   vpc_id                  = aws_vpc.jena_vpc.id
   cidr_block              = var.public_subnets[count.index]
+  availability_zone       = element(data.aws_availability_zones.available.names, count.index)
   map_public_ip_on_launch = true
 
   tags = {
@@ -23,6 +24,7 @@ resource "aws_subnet" "private_subnets" {
 
   vpc_id     = aws_vpc.jena_vpc.id
   cidr_block = var.private_subnets[count.index]
+  availability_zone = element(data.aws_availability_zones.available.names, count.index)
 
   tags = {
     Name = "jena-private-subnet-${count.index + 1}"
@@ -91,3 +93,5 @@ resource "aws_route_table_association" "private_subnet_association" {
   subnet_id      = aws_subnet.private_subnets[count.index].id
   route_table_id = aws_route_table.private_rt.id
 }
+
+data "aws_availability_zones" "available" {}

@@ -27,7 +27,6 @@ resource "aws_iam_role_policy_attachment" "eks_vpc_resource_controller" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
 }
 
-
 resource "aws_eks_cluster" "jena_cluster" {
   name     = "jena-cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
@@ -40,7 +39,6 @@ resource "aws_eks_cluster" "jena_cluster" {
     Name = "jena-cluster"
   }
 }
-
 
 resource "aws_iam_role" "eks_node_role" {
   name = "jena-eks-node-role"
@@ -61,7 +59,6 @@ resource "aws_iam_role" "eks_node_role" {
   }
 }
 
-
 resource "aws_iam_role_policy_attachment" "eks_worker_node_policy" {
   role       = aws_iam_role.eks_node_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
@@ -76,7 +73,6 @@ resource "aws_iam_role_policy_attachment" "ec2_container_registry_policy" {
   role       = aws_iam_role.eks_node_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 }
-
 
 resource "aws_eks_node_group" "jena_node_group" {
   cluster_name    = aws_eks_cluster.jena_cluster.name
@@ -94,5 +90,49 @@ resource "aws_eks_node_group" "jena_node_group" {
 
   tags = {
     Name = "jena-node-group"
+  }
+}
+
+resource "kubernetes_persistent_volume" "postgres_pv" {
+  metadata {
+    name = "postgres-pv"
+  }
+
+  spec {
+    capacity = {
+      storage = "5Gi"
+    }
+    volume_mode = "Filesystem"
+    access_modes = ["ReadWriteOnce"]
+    persistent_volume_reclaim_policy = "Retain"
+    storage_class_name = "gp2"
+
+    persistent_volume_source {
+      host_path {
+        path = "/mnt/data"
+      }
+    }
+  }
+}
+
+
+resource "kubernetes_persistent_volume_claim" "postgres_pvc" {
+  metadata {
+    name = "postgres-pvc"
+  }
+
+  spec {
+    access_modes = ["ReadWriteOnce"]
+    storage_class_name = "gp2"
+
+    resources {
+      requests = {
+        storage = "5Gi"
+      }
+    }
+  }
+
+    timeouts {
+    create = "30m"  # increase the timeout to 30 minutes (adjust as needed)
   }
 }
