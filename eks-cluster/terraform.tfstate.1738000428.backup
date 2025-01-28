@@ -1,0 +1,1186 @@
+{
+  "version": 4,
+  "terraform_version": "1.10.0",
+  "serial": 236,
+  "lineage": "6a407c41-4b81-9d77-8fdb-77bffb33dd30",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "aws_availability_zones",
+      "name": "available",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "all_availability_zones": null,
+            "exclude_names": null,
+            "exclude_zone_ids": null,
+            "filter": null,
+            "group_names": [
+              "eu-west-1-zg-1"
+            ],
+            "id": "eu-west-1",
+            "names": [
+              "eu-west-1a",
+              "eu-west-1b",
+              "eu-west-1c"
+            ],
+            "state": null,
+            "timeouts": null,
+            "zone_ids": [
+              "euw1-az3",
+              "euw1-az1",
+              "euw1-az2"
+            ]
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_eks_cluster",
+      "name": "jena_cluster",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "access_config": [
+              {
+                "authentication_mode": "CONFIG_MAP",
+                "bootstrap_cluster_creator_admin_permissions": true
+              }
+            ],
+            "arn": "arn:aws:eks:eu-west-1:438465169137:cluster/jena-cluster",
+            "certificate_authority": [
+              {
+                "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJSmwzYUtGYXFmQTR3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBeE1qY3dPRFV5TUROYUZ3MHpOVEF4TWpVd09EVTNNRE5hTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUNvaERuVTgyajFuejY2d1B2T2pkSUsyVHlXTGU5QXNnYTN6VDZkMkV2TEVDMytBVmhFSUxPSFRINGIKMFlOMmpoQUNRSHY3WU5RRW0zTS9SLzFGVVRRNnoyVEUrR3d3R2MwcXYzMEpWUUxHWTdoUVNEbktxbUJXYmtqQQo0aG8rdHhVUDBvaytrczVHeGlra2VoV2tDOU10K0JJWHlSWWRJNmxsaXNleHdGUFlEamRVbzIvUEFjdG9FUE9BCnU1Y2hPYkJlZXRpRld4Z2JpelBDMi9WR3FZZ2UvOTJYRythREYyZEkyWXp5RXpQa251OTMzU1phK3YyV1hqUUwKYXBWV0ZNZk1lUGRKdUtsbkVTVnNqZnJCdlN1VStESlY1T3FvQ0U0VDBRSk1vYVVJNkRsZG91QU90cFlQNjNNVgovSUwxZGxJUERSSTNDaU5Pbllnam1vU2dDQ05oQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRVU0vSWF2MFVOZkh2VmNhVEV1RlhaUVVHNFNUQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQVVpTXdKUWZzKwpnQUpHblZ3S29ZN0Vxc1JENW9QQ2tDa21MbkduaDYwaUdqRzJscFUvU1NVYWJ1Qnc5TWtGZnVIcTRyWldWQlVHCkw5T1oxWUY2R1lSWDg4ZU5IeVc2eFNpTnhBOThhUmVSN3B2ek5oNmhMbVpMQ1dKVmNCTi9vdEhybDBHL1Fva3EKdkZ1dWZGaHBkL2Z5UGVBRDNmUDJHUUhkQUtoVElsRzBabVlHcjFIQjM4L1l0akVyREt5WDhJZlp0bkQ5WXBSTQpXT0trY3BOU0tDUUMzeVlnRkt4WmE4UzBaNElxMVZvdklSd2w2L0ZPb1RxT3IydWhsUWM1VmJzR1JPalZvTmd2CjZxZWxBeGQwb1pqT0hKeVZIdnpFa0ltVkduZmpZdTIvY2VEVWZXbmh0MkRrUkJ0Y2JQRU01Mmg1SXduS0RXTUcKWHVKRVcxbmcxMjRzCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+              }
+            ],
+            "cluster_id": null,
+            "compute_config": [],
+            "created_at": "2025-01-27T08:53:29Z",
+            "enabled_cluster_log_types": [],
+            "endpoint": "https://4ADD05F3B5EF6A64D5612E1404771C2D.gr7.eu-west-1.eks.amazonaws.com",
+            "id": "jena-cluster",
+            "identity": [
+              {
+                "oidc": [
+                  {
+                    "issuer": "https://oidc.eks.eu-west-1.amazonaws.com/id/4ADD05F3B5EF6A64D5612E1404771C2D"
+                  }
+                ]
+              }
+            ],
+            "kubernetes_network_config": [
+              {
+                "elastic_load_balancing": [
+                  {
+                    "enabled": false
+                  }
+                ],
+                "ip_family": "ipv4",
+                "service_ipv4_cidr": "172.20.0.0/16",
+                "service_ipv6_cidr": ""
+              }
+            ],
+            "name": "jena-cluster",
+            "outpost_config": [],
+            "platform_version": "eks.17",
+            "remote_network_config": [],
+            "role_arn": "arn:aws:iam::438465169137:role/jena-eks-cluster-role",
+            "status": "ACTIVE",
+            "storage_config": [],
+            "tags": {
+              "Name": "jena-cluster"
+            },
+            "upgrade_policy": [
+              {
+                "support_type": "EXTENDED"
+              }
+            ],
+            "version": "1.31",
+            "vpc_config": [
+              {
+                "cluster_security_group_id": "sg-038298155b80e08f2",
+                "endpoint_private_access": false,
+                "endpoint_public_access": true,
+                "public_access_cidrs": [
+                  "0.0.0.0/0"
+                ],
+                "security_group_ids": [],
+                "subnet_ids": [
+                  "subnet-00ab5409ce9cc004b",
+                  "subnet-01c7fc3db13f1c685",
+                  "subnet-02e88cd53ce4115cc",
+                  "subnet-09315cb9dd0792c27"
+                ],
+                "vpc_id": "vpc-059692483961beaac"
+              }
+            ],
+            "zonal_shift_config": []
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_eks_cluster_auth",
+      "name": "jena",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "jena-cluster",
+            "name": "jena-cluster",
+            "token": "k8s-aws-v1.aHR0cHM6Ly9zdHMuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb20vP0FjdGlvbj1HZXRDYWxsZXJJZGVudGl0eSZWZXJzaW9uPTIwMTEtMDYtMTUmWC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBV01GVVBRM1lVTFhVVVFTUSUyRjIwMjUwMTI3JTJGZXUtd2VzdC0xJTJGc3RzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAxMjdUMTUyNzQwWiZYLUFtei1FeHBpcmVzPTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JTNCeC1rOHMtYXdzLWlkJlgtQW16LVNpZ25hdHVyZT05YTc5YjZmMDE0MjJhNDJiZmI0YWUyMWE2MTBkNTY0ZjNmMzEwNTU5YmFlYzdlNTk2OTIzNjc1NTM4NDQ3MjI1"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "token"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_eip",
+      "name": "jena_nat_eip",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": null,
+            "allocation_id": "eipalloc-0a3fc84ae593a8b04",
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:elastic-ip/eipalloc-0a3fc84ae593a8b04",
+            "associate_with_private_ip": null,
+            "association_id": "eipassoc-000954f2ce73327b4",
+            "carrier_ip": "",
+            "customer_owned_ip": "",
+            "customer_owned_ipv4_pool": "",
+            "domain": "vpc",
+            "id": "eipalloc-0a3fc84ae593a8b04",
+            "instance": "",
+            "ipam_pool_id": null,
+            "network_border_group": "eu-west-1",
+            "network_interface": "eni-07ee22a0f5a16881f",
+            "private_dns": "ip-10-0-1-131.eu-west-1.compute.internal",
+            "private_ip": "10.0.1.131",
+            "ptr_record": "",
+            "public_dns": "ec2-34-241-212-69.eu-west-1.compute.amazonaws.com",
+            "public_ip": "34.241.212.69",
+            "public_ipv4_pool": "amazon",
+            "tags": {
+              "Name": "jena-nat-eip"
+            },
+            "tags_all": {
+              "Name": "jena-nat-eip"
+            },
+            "timeouts": null,
+            "vpc": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjoxODAwMDAwMDAwMDAsInJlYWQiOjkwMDAwMDAwMDAwMCwidXBkYXRlIjozMDAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_eks_cluster",
+      "name": "jena_cluster",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "access_config": [
+              {
+                "authentication_mode": "CONFIG_MAP",
+                "bootstrap_cluster_creator_admin_permissions": true
+              }
+            ],
+            "arn": "arn:aws:eks:eu-west-1:438465169137:cluster/jena-cluster",
+            "bootstrap_self_managed_addons": true,
+            "certificate_authority": [
+              {
+                "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJSmwzYUtGYXFmQTR3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBeE1qY3dPRFV5TUROYUZ3MHpOVEF4TWpVd09EVTNNRE5hTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUNvaERuVTgyajFuejY2d1B2T2pkSUsyVHlXTGU5QXNnYTN6VDZkMkV2TEVDMytBVmhFSUxPSFRINGIKMFlOMmpoQUNRSHY3WU5RRW0zTS9SLzFGVVRRNnoyVEUrR3d3R2MwcXYzMEpWUUxHWTdoUVNEbktxbUJXYmtqQQo0aG8rdHhVUDBvaytrczVHeGlra2VoV2tDOU10K0JJWHlSWWRJNmxsaXNleHdGUFlEamRVbzIvUEFjdG9FUE9BCnU1Y2hPYkJlZXRpRld4Z2JpelBDMi9WR3FZZ2UvOTJYRythREYyZEkyWXp5RXpQa251OTMzU1phK3YyV1hqUUwKYXBWV0ZNZk1lUGRKdUtsbkVTVnNqZnJCdlN1VStESlY1T3FvQ0U0VDBRSk1vYVVJNkRsZG91QU90cFlQNjNNVgovSUwxZGxJUERSSTNDaU5Pbllnam1vU2dDQ05oQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRVU0vSWF2MFVOZkh2VmNhVEV1RlhaUVVHNFNUQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQVVpTXdKUWZzKwpnQUpHblZ3S29ZN0Vxc1JENW9QQ2tDa21MbkduaDYwaUdqRzJscFUvU1NVYWJ1Qnc5TWtGZnVIcTRyWldWQlVHCkw5T1oxWUY2R1lSWDg4ZU5IeVc2eFNpTnhBOThhUmVSN3B2ek5oNmhMbVpMQ1dKVmNCTi9vdEhybDBHL1Fva3EKdkZ1dWZGaHBkL2Z5UGVBRDNmUDJHUUhkQUtoVElsRzBabVlHcjFIQjM4L1l0akVyREt5WDhJZlp0bkQ5WXBSTQpXT0trY3BOU0tDUUMzeVlnRkt4WmE4UzBaNElxMVZvdklSd2w2L0ZPb1RxT3IydWhsUWM1VmJzR1JPalZvTmd2CjZxZWxBeGQwb1pqT0hKeVZIdnpFa0ltVkduZmpZdTIvY2VEVWZXbmh0MkRrUkJ0Y2JQRU01Mmg1SXduS0RXTUcKWHVKRVcxbmcxMjRzCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+              }
+            ],
+            "cluster_id": null,
+            "compute_config": [],
+            "created_at": "2025-01-27T08:53:29Z",
+            "enabled_cluster_log_types": [],
+            "encryption_config": [],
+            "endpoint": "https://4ADD05F3B5EF6A64D5612E1404771C2D.gr7.eu-west-1.eks.amazonaws.com",
+            "id": "jena-cluster",
+            "identity": [
+              {
+                "oidc": [
+                  {
+                    "issuer": "https://oidc.eks.eu-west-1.amazonaws.com/id/4ADD05F3B5EF6A64D5612E1404771C2D"
+                  }
+                ]
+              }
+            ],
+            "kubernetes_network_config": [
+              {
+                "elastic_load_balancing": [
+                  {
+                    "enabled": false
+                  }
+                ],
+                "ip_family": "ipv4",
+                "service_ipv4_cidr": "172.20.0.0/16",
+                "service_ipv6_cidr": ""
+              }
+            ],
+            "name": "jena-cluster",
+            "outpost_config": [],
+            "platform_version": "eks.17",
+            "remote_network_config": [],
+            "role_arn": "arn:aws:iam::438465169137:role/jena-eks-cluster-role",
+            "status": "ACTIVE",
+            "storage_config": [],
+            "tags": {
+              "Name": "jena-cluster"
+            },
+            "tags_all": {
+              "Name": "jena-cluster"
+            },
+            "timeouts": null,
+            "upgrade_policy": [
+              {
+                "support_type": "EXTENDED"
+              }
+            ],
+            "version": "1.31",
+            "vpc_config": [
+              {
+                "cluster_security_group_id": "sg-038298155b80e08f2",
+                "endpoint_private_access": false,
+                "endpoint_public_access": true,
+                "public_access_cidrs": [
+                  "0.0.0.0/0"
+                ],
+                "security_group_ids": [],
+                "subnet_ids": [
+                  "subnet-00ab5409ce9cc004b",
+                  "subnet-01c7fc3db13f1c685",
+                  "subnet-02e88cd53ce4115cc",
+                  "subnet-09315cb9dd0792c27"
+                ],
+                "vpc_id": "vpc-059692483961beaac"
+              }
+            ],
+            "zonal_shift_config": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjkwMDAwMDAwMDAwMCwidXBkYXRlIjozNjAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0=",
+          "dependencies": [
+            "aws_iam_role.eks_cluster_role",
+            "aws_subnet.private_subnets",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_eks_node_group",
+      "name": "jena_node_group",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "ami_type": "AL2023_x86_64_STANDARD",
+            "arn": "arn:aws:eks:eu-west-1:438465169137:nodegroup/jena-cluster/jena-node-group/f4ca537e-9fe1-293e-bd3f-439f7c779a12",
+            "capacity_type": "ON_DEMAND",
+            "cluster_name": "jena-cluster",
+            "disk_size": 20,
+            "force_update_version": null,
+            "id": "jena-cluster:jena-node-group",
+            "instance_types": [
+              "t3.medium"
+            ],
+            "labels": {},
+            "launch_template": [],
+            "node_group_name": "jena-node-group",
+            "node_group_name_prefix": "",
+            "node_repair_config": [],
+            "node_role_arn": "arn:aws:iam::438465169137:role/jena-eks-node-role",
+            "release_version": "1.31.4-20250116",
+            "remote_access": [],
+            "resources": [
+              {
+                "autoscaling_groups": [
+                  {
+                    "name": "eks-jena-node-group-f4ca537e-9fe1-293e-bd3f-439f7c779a12"
+                  }
+                ],
+                "remote_access_security_group_id": ""
+              }
+            ],
+            "scaling_config": [
+              {
+                "desired_size": 2,
+                "max_size": 3,
+                "min_size": 1
+              }
+            ],
+            "status": "ACTIVE",
+            "subnet_ids": [
+              "subnet-01c7fc3db13f1c685",
+              "subnet-09315cb9dd0792c27"
+            ],
+            "tags": {
+              "Name": "jena-node-group"
+            },
+            "tags_all": {
+              "Name": "jena-node-group"
+            },
+            "taint": [],
+            "timeouts": null,
+            "update_config": [
+              {
+                "max_unavailable": 1,
+                "max_unavailable_percentage": 0
+              }
+            ],
+            "version": "1.31"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozNjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInVwZGF0ZSI6MzYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eks_cluster.jena_cluster",
+            "aws_iam_role.eks_cluster_role",
+            "aws_iam_role.eks_node_role",
+            "aws_subnet.private_subnets",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "eks_cluster_role",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::438465169137:role/jena-eks-cluster-role",
+            "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"eks.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+            "create_date": "2025-01-27T08:53:15Z",
+            "description": "",
+            "force_detach_policies": false,
+            "id": "jena-eks-cluster-role",
+            "inline_policy": [],
+            "managed_policy_arns": [
+              "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+              "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
+            ],
+            "max_session_duration": 3600,
+            "name": "jena-eks-cluster-role",
+            "name_prefix": "",
+            "path": "/",
+            "permissions_boundary": "",
+            "tags": {
+              "Name": "jena-eks-cluster-role"
+            },
+            "tags_all": {
+              "Name": "jena-eks-cluster-role"
+            },
+            "unique_id": "AROAWMFUPQ3Y2HLVBVLFI"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "eks_node_role",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::438465169137:role/jena-eks-node-role",
+            "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+            "create_date": "2025-01-27T08:53:15Z",
+            "description": "",
+            "force_detach_policies": false,
+            "id": "jena-eks-node-role",
+            "inline_policy": [],
+            "managed_policy_arns": [
+              "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+              "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+              "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+            ],
+            "max_session_duration": 3600,
+            "name": "jena-eks-node-role",
+            "name_prefix": "",
+            "path": "/",
+            "permissions_boundary": "",
+            "tags": {
+              "Name": "jena-eks-node-role"
+            },
+            "tags_all": {
+              "Name": "jena-eks-node-role"
+            },
+            "unique_id": "AROAWMFUPQ3YUVT7CU6XY"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "ec2_container_registry_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "jena-eks-node-role-20250127085316237000000001",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+            "role": "jena-eks-node-role"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_role.eks_node_role"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "eks_cluster_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "jena-eks-cluster-role-20250127085316614400000005",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+            "role": "jena-eks-cluster-role"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_role.eks_cluster_role"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "eks_cni_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "jena-eks-node-role-20250127085316242200000002",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+            "role": "jena-eks-node-role"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_role.eks_node_role"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "eks_vpc_resource_controller",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "jena-eks-cluster-role-20250127085316452100000004",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController",
+            "role": "jena-eks-cluster-role"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_role.eks_cluster_role"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "eks_worker_node_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "jena-eks-node-role-20250127085316449400000003",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+            "role": "jena-eks-node-role"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_role.eks_node_role"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_internet_gateway",
+      "name": "jena_igw",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:internet-gateway/igw-077d92dee64f574ac",
+            "id": "igw-077d92dee64f574ac",
+            "owner_id": "438465169137",
+            "tags": {
+              "Name": "jena-igw"
+            },
+            "tags_all": {
+              "Name": "jena-igw"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-059692483961beaac"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_vpc.jena_vpc"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_nat_gateway",
+      "name": "jena_nat",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allocation_id": "eipalloc-0a3fc84ae593a8b04",
+            "association_id": "eipassoc-000954f2ce73327b4",
+            "connectivity_type": "public",
+            "id": "nat-0a53b8cc7b76abe14",
+            "network_interface_id": "eni-07ee22a0f5a16881f",
+            "private_ip": "10.0.1.131",
+            "public_ip": "34.241.212.69",
+            "secondary_allocation_ids": [],
+            "secondary_private_ip_address_count": 0,
+            "secondary_private_ip_addresses": [],
+            "subnet_id": "subnet-00ab5409ce9cc004b",
+            "tags": {
+              "Name": "jena-nat-gateway"
+            },
+            "tags_all": {
+              "Name": "jena-nat-gateway"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTgwMDAwMDAwMDAwMCwidXBkYXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "aws_eip.jena_nat_eip",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "private_rt",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:route-table/rtb-01677368bc9b0c448",
+            "id": "rtb-01677368bc9b0c448",
+            "owner_id": "438465169137",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "nat-0a53b8cc7b76abe14",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "Name": "jena-private-route-table"
+            },
+            "tags_all": {
+              "Name": "jena-private-route-table"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-059692483961beaac"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.jena_nat_eip",
+            "aws_nat_gateway.jena_nat",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "public_rt",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:route-table/rtb-02d744d703e3786e5",
+            "id": "rtb-02d744d703e3786e5",
+            "owner_id": "438465169137",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "igw-077d92dee64f574ac",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "Name": "jena-public-route-table"
+            },
+            "tags_all": {
+              "Name": "jena-public-route-table"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-059692483961beaac"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_internet_gateway.jena_igw",
+            "aws_vpc.jena_vpc"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "private_subnet_association",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-03dcc0a48532a6b37",
+            "route_table_id": "rtb-01677368bc9b0c448",
+            "subnet_id": "subnet-01c7fc3db13f1c685",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.jena_nat_eip",
+            "aws_nat_gateway.jena_nat",
+            "aws_route_table.private_rt",
+            "aws_subnet.private_subnets",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-065a2e49a4099011c",
+            "route_table_id": "rtb-01677368bc9b0c448",
+            "subnet_id": "subnet-09315cb9dd0792c27",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.jena_nat_eip",
+            "aws_nat_gateway.jena_nat",
+            "aws_route_table.private_rt",
+            "aws_subnet.private_subnets",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "public_subnet_association",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-0edb54d181ca780dc",
+            "route_table_id": "rtb-02d744d703e3786e5",
+            "subnet_id": "subnet-00ab5409ce9cc004b",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_internet_gateway.jena_igw",
+            "aws_route_table.public_rt",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-090cb4efd20fa5cea",
+            "route_table_id": "rtb-02d744d703e3786e5",
+            "subnet_id": "subnet-02e88cd53ce4115cc",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_internet_gateway.jena_igw",
+            "aws_route_table.public_rt",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "private_subnets",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:subnet/subnet-01c7fc3db13f1c685",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "eu-west-1a",
+            "availability_zone_id": "euw1-az3",
+            "cidr_block": "10.0.3.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-01c7fc3db13f1c685",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "438465169137",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "Name": "jena-private-subnet-1"
+            },
+            "tags_all": {
+              "Name": "jena-private-subnet-1"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-059692483961beaac"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:subnet/subnet-09315cb9dd0792c27",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "eu-west-1b",
+            "availability_zone_id": "euw1-az1",
+            "cidr_block": "10.0.4.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-09315cb9dd0792c27",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "438465169137",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "Name": "jena-private-subnet-2"
+            },
+            "tags_all": {
+              "Name": "jena-private-subnet-2"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-059692483961beaac"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "public_subnets",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:subnet/subnet-00ab5409ce9cc004b",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "eu-west-1a",
+            "availability_zone_id": "euw1-az3",
+            "cidr_block": "10.0.1.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-00ab5409ce9cc004b",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": true,
+            "outpost_arn": "",
+            "owner_id": "438465169137",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "Name": "jena-public-subnet-1"
+            },
+            "tags_all": {
+              "Name": "jena-public-subnet-1"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-059692483961beaac"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:subnet/subnet-02e88cd53ce4115cc",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "eu-west-1b",
+            "availability_zone_id": "euw1-az1",
+            "cidr_block": "10.0.2.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-02e88cd53ce4115cc",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": true,
+            "outpost_arn": "",
+            "owner_id": "438465169137",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "Name": "jena-public-subnet-2"
+            },
+            "tags_all": {
+              "Name": "jena-public-subnet-2"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-059692483961beaac"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "jena_vpc",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-west-1:438465169137:vpc/vpc-059692483961beaac",
+            "assign_generated_ipv6_cidr_block": false,
+            "cidr_block": "10.0.0.0/16",
+            "default_network_acl_id": "acl-0aeedade23a6cef79",
+            "default_route_table_id": "rtb-0fda27817bfa5547d",
+            "default_security_group_id": "sg-0db5eebc62f71098a",
+            "dhcp_options_id": "dopt-073c2b8749abb7fe4",
+            "enable_dns_hostnames": false,
+            "enable_dns_support": true,
+            "enable_network_address_usage_metrics": false,
+            "id": "vpc-059692483961beaac",
+            "instance_tenancy": "default",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_association_id": "",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_network_border_group": "",
+            "ipv6_ipam_pool_id": "",
+            "ipv6_netmask_length": 0,
+            "main_route_table_id": "rtb-0fda27817bfa5547d",
+            "owner_id": "438465169137",
+            "tags": {
+              "Name": "jena-vpc"
+            },
+            "tags_all": {
+              "Name": "jena-vpc"
+            }
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume",
+      "name": "postgres_pv",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "postgres-pv",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {},
+                "name": "postgres-pv",
+                "resource_version": "611",
+                "uid": "86f109f4-c640-4e01-bf3f-770ea677419c"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteOnce"
+                ],
+                "capacity": {
+                  "storage": "5Gi"
+                },
+                "claim_ref": [],
+                "mount_options": [],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [
+                      {
+                        "path": "/mnt/data",
+                        "type": ""
+                      }
+                    ],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "gp2",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "aws_eks_cluster.jena_cluster",
+            "aws_iam_role.eks_cluster_role",
+            "aws_subnet.private_subnets",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available",
+            "data.aws_eks_cluster.jena_cluster",
+            "data.aws_eks_cluster_auth.jena"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume_claim",
+      "name": "postgres_pvc",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "status": "tainted",
+          "schema_version": 0,
+          "attributes": {
+            "id": "default/postgres-pvc",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "postgres-pvc",
+                "namespace": "default",
+                "resource_version": "",
+                "uid": ""
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteOnce"
+                ],
+                "resources": [
+                  {
+                    "limits": null,
+                    "requests": {
+                      "storage": "5Gi"
+                    }
+                  }
+                ],
+                "selector": [],
+                "storage_class_name": "gp2",
+                "volume_mode": "",
+                "volume_name": ""
+              }
+            ],
+            "timeouts": {
+              "create": "30m"
+            },
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "aws_eks_cluster.jena_cluster",
+            "aws_iam_role.eks_cluster_role",
+            "aws_subnet.private_subnets",
+            "aws_subnet.public_subnets",
+            "aws_vpc.jena_vpc",
+            "data.aws_availability_zones.available",
+            "data.aws_eks_cluster.jena_cluster",
+            "data.aws_eks_cluster_auth.jena"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

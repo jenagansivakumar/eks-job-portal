@@ -32,7 +32,7 @@ resource "aws_iam_role_policy_attachment" "eks_vpc_resource_controller" {
 
 # EKS Cluster
 resource "aws_eks_cluster" "jena_cluster" {
-  name     = "jena-cluster"
+  name     = "jena-cluster-latest"
   role_arn = aws_iam_role.eks_cluster_role.arn
 
   vpc_config {
@@ -40,7 +40,7 @@ resource "aws_eks_cluster" "jena_cluster" {
   }
 
   tags = {
-    Name = "jena-cluster"
+    Name = "jena-cluster-latest"
   }
 }
 
@@ -102,57 +102,5 @@ resource "aws_eks_node_group" "jena_node_group" {
   }
 }
 
-# EBS Volume for PostgreSQL
-resource "aws_ebs_volume" "postgres_ebs" {
-  availability_zone = "eu-west-1a"  # Replace with your AZ
-  size              = 5
-  type              = "gp2"
 
-  tags = {
-    Name = "postgres-ebs"
-  }
-}
 
-# Kubernetes Persistent Volume (EBS-backed)
-resource "kubernetes_persistent_volume" "postgres_pv" {
-  metadata {
-    name = "postgres-pv"
-  }
-
-  spec {
-    capacity = {
-      storage = "5Gi"
-    }
-    access_modes = ["ReadWriteOnce"]
-    storage_class_name = "gp2"
-    persistent_volume_reclaim_policy = "Retain"
-
-    persistent_volume_source {
-      aws_elastic_block_store {
-        volume_id = aws_ebs_volume.postgres_ebs.id
-      }
-    }
-  }
-}
-
-# Kubernetes Persistent Volume Claim
-resource "kubernetes_persistent_volume_claim" "postgres_pvc" {
-  metadata {
-    name = "postgres-pvc"
-  }
-
-  spec {
-    access_modes = ["ReadWriteOnce"]
-    storage_class_name = "gp2"
-
-    resources {
-      requests = {
-        storage = "5Gi"
-      }
-    }
-  }
-
-  timeouts {
-    create = "30m"
-  }
-}
