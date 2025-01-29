@@ -8,6 +8,7 @@ import { Button } from '../../../ui/button';
 import { Input } from '../../../ui/input';
 import { Label } from '../../../ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '../../../ui/card';
+import { apiUrl } from '../login/LoginPage';
 
 type FormData = z.infer<typeof FormSchema>;
 
@@ -30,7 +31,7 @@ export const SignUpPage = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:4000/auth/signup',
+        apiUrl,
         data,
         { headers: { 'Content-Type': 'application/json' } }
       );

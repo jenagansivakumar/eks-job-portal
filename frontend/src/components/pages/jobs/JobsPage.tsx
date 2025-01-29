@@ -3,6 +3,7 @@ import { Job } from "../../../models/JobSchema";
 import axios from "axios";
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { Button } from "../../ui/button";
+import { apiUrl } from "../auth/login/LoginPage";
 
 export const JobsPage = () => {
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -13,7 +14,7 @@ export const JobsPage = () => {
     setError("");
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:4000/jobs/fetch");
+      const response = await axios.get(apiUrl);
       setJobs(response.data);
     } catch (error: any) {
       setError(error.message || "Cannot fetch jobs");

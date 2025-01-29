@@ -7,6 +7,7 @@ import { Button } from "../../ui/button";
 import { Input } from "../../ui/input";
 import { Label } from "../../ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
+import { apiUrl } from "../auth/login/LoginPage";
 
 const JobSchema = z.object({
   jobTitle: z.string().min(1, "Job title is required"),
@@ -34,7 +35,7 @@ export const CreateJob = () => {
     try {
       const token = localStorage.getItem("authToken")
       console.log(token)
-      await axios.post("http://localhost:4000/jobs/create", data, {
+      await axios.post(apiUrl, data, {
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}`},
         
       });

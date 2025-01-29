@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 
 type LoginData = z.infer<typeof LoginSchema>;
 
+export const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:4000";
+
 export const LoginPage = () => {
   const {
     register,
@@ -33,7 +35,7 @@ export const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/auth/login",
+        apiUrl,
         data,
         { headers: { "Content-Type": "application/json" } }
       );

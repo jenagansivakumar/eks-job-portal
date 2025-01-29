@@ -19,7 +19,8 @@ services:
     ports:
       - "4000:4000" 
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     environment:
       DATABASE_URL: "postgresql://postgres:password@db:5432/usersdb"
       JWT_SECRET: "yourSuperSecretKey123!@"
@@ -41,6 +42,11 @@ services:
       POSTGRES_DB: mydb
     volumes:
       - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
 networks:
   app-network:
