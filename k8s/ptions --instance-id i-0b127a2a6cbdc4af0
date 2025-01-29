@@ -1,0 +1,11 @@
+{
+    "InstanceId": "i-0bc8bd35ad6587e5d",
+    "InstanceMetadataOptions": {
+        "State": "pending",
+        "HttpTokens": "required",
+        "HttpPutResponseHopLimit": 1,
+        "HttpEndpoint": "enabled",
+        "HttpProtocolIpv6": "disabled",
+        "InstanceMetadataTags": "disabled"
+    }
+}

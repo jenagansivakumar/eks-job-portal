@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app: frontend
   name: frontend
 spec:
   replicas: 2
@@ -13,7 +15,11 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
-        image: jenagan/frontend:latest
+      - image: jenagan/frontend:latest  # Updated frontend image
+        name: frontend
         ports:
         - containerPort: 3000
+          name: frontend
+        env:
+          - name: NEXT_PUBLIC_API_URL
+            value: "http://backend-service:4000"  # Updated backend service URL

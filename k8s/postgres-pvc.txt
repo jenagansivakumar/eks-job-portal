@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: postgres-data
-  namespace: jena-job-portal
+  name: postgres-pvc
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: ebs-class
+  storageClassName: gp2
   resources:
     requests:
-      storage: 15Gi
+      storage: 5Gi
