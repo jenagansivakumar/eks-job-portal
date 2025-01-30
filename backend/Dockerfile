@@ -1,22 +1,15 @@
-FROM node:20
-
+FROM --platform=linux/amd64 node:20.18.0 as build
 WORKDIR /app
 
-# Copy only package.json and package-lock.json to optimize Docker cache
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy Prisma and application files into the container
-COPY prisma ./prisma
 COPY . .
+RUN npm run build
 
-# Generate Prisma client
-RUN npx prisma generate
+FROM --platform=linux/amd64 nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose the port
-EXPOSE 4000
-
-# Run Prisma migrations and then start the application
-CMD ["sh", "-c", "npx prisma db push && npm start"]
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

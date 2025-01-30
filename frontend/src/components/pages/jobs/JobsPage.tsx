@@ -12,11 +12,12 @@ export const JobsPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const fetchJobs = async () => {
-    console.log("Fetching jobs...")
+    console.log("TEST Fetching jobs...")
+    console.log("API_URL: ", apiUrl)
     setError("");
     setLoading(true);
     try {
-      const response = await axios.get(`${apiUrl}/fetch/jobs`);
+      const response = await axios.get(`${apiUrl}/jobs/fetch`);
       console.log("Fetched data: ", response.data)
       setJobs(Array.isArray(response.data) ? response.data : []);
     } catch (error: any) {

@@ -40,7 +40,7 @@ spec:
                 secretKeyRef:
                   name: backend-secrets
                   key: JWT_SECRET
-          command: ["sh", "-c", "npx prisma migrate deploy && npm start"]
+          command: ["sh", "-c", "npx --version || npm --version && npm run migrate && npm start"]
 ---
 apiVersion: v1
 kind: Service

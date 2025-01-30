@@ -35,7 +35,7 @@ export const CreateJob = () => {
     try {
       const token = localStorage.getItem("authToken")
       console.log(token)
-      await axios.post(apiUrl, data, {
+      await axios.post(`${apiUrl}/jobs/create`, data, {
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}`},
         
       });

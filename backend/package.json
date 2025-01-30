@@ -2,10 +2,12 @@
   "name": "feather-project",
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "start": "nodemon --verbose --exec \"tsc && node dist/app.js\"",
-    "build": "tsc"
-  },
+ "scripts": {
+  "start": "node dist/app.js",
+  "dev": "nodemon --verbose --exec \"tsc && node dist/app.js\"",
+  "build": "tsc",
+  "prisma:push": "prisma db push"
+},
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/bcryptjs": "^2.4.6",
