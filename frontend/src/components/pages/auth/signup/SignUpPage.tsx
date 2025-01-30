@@ -31,7 +31,7 @@ export const SignUpPage = () => {
 
     try {
       const response = await axios.post(
-        apiUrl,
+        `${apiUrl}/auth/signup`,
         data,
         { headers: { 'Content-Type': 'application/json' } }
       );

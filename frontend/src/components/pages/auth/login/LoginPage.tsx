@@ -35,7 +35,7 @@ export const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        apiUrl,
+        `${apiUrl}/auth/login`,
         data,
         { headers: { "Content-Type": "application/json" } }
       );
