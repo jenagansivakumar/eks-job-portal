@@ -16,7 +16,7 @@ app.use(cors())
 app.use("/users", userRouter)
 app.use("/jobs", jobRouter)
 app.use("/auth", authRouter )
-app.use("/", healthCheck)
+app.use("/healtcheck", healthCheck)
 
 
 

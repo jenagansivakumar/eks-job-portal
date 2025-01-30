@@ -6,16 +6,19 @@ import { Button } from "../../ui/button";
 import { apiUrl } from "../auth/login/LoginPage";
 
 export const JobsPage = () => {
+  console.log("Component rendered")
   const [jobs, setJobs] = useState<Job[]>([]);
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
   const fetchJobs = async () => {
+    console.log("Fetching jobs...")
     setError("");
     setLoading(true);
     try {
-      const response = await axios.get(apiUrl);
-      setJobs(response.data);
+      const response = await axios.get(`${apiUrl}/fetch/jobs`);
+      console.log("Fetched data: ", response.data)
+      setJobs(Array.isArray(response.data) ? response.data : []);
     } catch (error: any) {
       setError(error.message || "Cannot fetch jobs");
     } finally {

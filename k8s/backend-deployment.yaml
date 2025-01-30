@@ -26,6 +26,7 @@ spec:
       containers:
         - name: backend
           image: jenagan/job-portal-backend:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 4000
           env:
