@@ -35,7 +35,7 @@ jobs:
           aws-region: eu-west-1
 
       - name: Set up kubectl
-        uses: actions/setup-kubectl@v2
+        uses: kubectl/actions/setup-kubectl@v2
         with:
           kubectl-version: 'v1.32.0'
 
