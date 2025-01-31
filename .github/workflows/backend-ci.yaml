@@ -40,9 +40,9 @@ jobs:
           aws-region: eu-west-1
 
       - name: Set up kubectl
-        uses: kubectl/actions/setup-kubectl@v2
+        uses: azure/setup-kubectl@v1
         with:
-          kubectl-version: 'v1.32.0'
+          version: 'v1.32.0'
 
       - name: Configure kubectl to access EKS
         run: |
