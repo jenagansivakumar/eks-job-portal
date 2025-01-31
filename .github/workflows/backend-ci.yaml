@@ -32,6 +32,27 @@ jobs:
           cd backend
           npm run build
 
-      - name: Deploy
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+
+      - name: Set up kubectl
+        uses: actions/setup-kubectl@v2
+        with:
+          kubectl-version: 'v1.32.0'
+
+      - name: Configure kubectl to access EKS
         run: |
-          echo "Deploying app..."
+          aws eks update-kubeconfig --name jena-cluster --region eu-west-1
+
+      - name: Deploy to Kubernetes
+        run: |
+          kubectl apply -f k8s/backend-deployment.yaml  
+          kubectl rollout status deployment/backend 
+
+      - name: Notify Deployment Success
+        run: |
+          echo "Deployment successful!"

@@ -16,12 +16,38 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          
       - name: Install Dependencies
         run: |
          cd frontend
          npm install
-  
+
       - name: Build Project
         run: |
          cd frontend
          npm run build
+
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+
+      - name: Set up kubectl
+        uses: actions/setup-kubectl@v2
+        with:
+          kubectl-version: 'v1.32.0'
+
+      - name: Configure kubectl to access EKS
+        run: |
+          aws eks update-kubeconfig --name jena-cluster --region eu-west-1
+
+      - name: Deploy Frontend to Kubernetes
+        run: |
+          kubectl apply -f k8s/frontend-deployment.yaml 
+          kubectl rollout status deployment/frontend  
+
+      - name: Notify Deployment Success
+        run: |
+          echo "Frontend deployment successful!"
