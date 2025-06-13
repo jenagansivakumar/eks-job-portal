@@ -36,7 +36,7 @@ EmployEye is a full-stack job portal application where users can sign up, log in
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/jenagansivakumar/employeye-job-portal.git
+git clone https://github.com/jenagansivakumar/eks-job-portal.git
 cd employeye-job-portal
 ```
 
